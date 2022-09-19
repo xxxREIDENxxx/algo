@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Bienvenido Admin:</h1>
+        </div>
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <a href="#" (click)="logout()">Cerrar sesion</a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Lugar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let pedido of pedidos">
+                    <td>
+                        {{pedido.user}}
+                    </td>
+                    <td>
+                        {{pedido.fecha}}
+                    </td>
+                    <td>
+                        {{pedido.estado}}
+                    </td>
+                    <td>
+                        {{pedido.lugar}}
+                    </td>
+                   
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-success" >Agregar Pedido</button>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
